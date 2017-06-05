@@ -43,11 +43,13 @@ However, the first form is more useful for calculating $\beta_1$ from "scratch",
 
 $$ { cov(y, x) \over var(x) } = {\sum^n_{i=1}(y_i - \bar y)(x_i - \bar x) \over n } \frac n{ \sum^n_{i=1} (x_i - \bar x)^2} = {\sum^n_{i=1}(y_i - \bar y)(x_i - \bar x) \over \sum^n_{i=1} (x_i - \bar x)^2}$$
 
-* [Variance](https://en.wikipedia.org/wiki/Variance#Discrete_random_variable):
+* [Variance](https://en.wikipedia.org/wiki/Variance#Discrete_random_variable): 
+Note: divide by **n - 1** to calculate sample quantity.
 
 $$var(x) = \frac 1n \sum^n_{i=1} (x_i - \bar x)^2$$
 
 * [Covariance](https://en.wikipedia.org/wiki/Covariance#Definition):
+Note: divide by **n - 1** to calculate sample quantity.
 
 $$cov(y, x) = {\sum^n_{i=1}(y_i - \bar y)(x_i - \bar x) \over n }$$
 
@@ -55,8 +57,8 @@ $$cov(y, x) = {\sum^n_{i=1}(y_i - \bar y)(x_i - \bar x) \over n }$$
 
 $$\sigma_x = \sqrt{ var(x) } = \sqrt{\frac 1n \sum^n_{i=1} (x_i - \bar x)^2}$$
 
-* [correlation](https://en.wikipedia.org/wiki/Correlation_and_dependence#Pearson.27s_product-moment_coefficient) coefficient:
+* [correlation](https://en.wikipedia.org/wiki/Correlation_and_dependence#Pearson.27s_product-moment_coefficient) coefficient (sample quantity uses **n - 1**):
 
-$$cor(x,y) = r_{xy} =  {\sum^n_{i=1}(y_i - \bar y)(x_i - \bar x) \over n \sigma_x \sigma_y}$$
+$$cor(x,y) = r_{xy} =  {\sum^n_{i=1}(x_i - \bar x)(y_i - \bar y) \over (n - 1) \sigma_x \sigma_y}$$
 
-$$ = {\sum^n_{i=1}(y_i - \bar y)(x_i - \bar x) \over \sqrt{ \sum^n_{i=1} (x_i - \bar x)^2} \sqrt{ \sum^n_{i=1} (y_i - \bar y)^2} } $$
+$$ = {\sum^n_{i=1}(y_i - \bar y)(x_i - \bar x) \over \sqrt{ \sum^n_{i=1} (x_i - \bar x)^2 \sum^n_{i=1} (y_i - \bar y)^2} } $$
