@@ -26,19 +26,22 @@ scratch.slm.01 = list(
     },
     
     # function for fitting simple linear models 
-    # returns fitted model object
+    # returns fitted model object from training data
     fit = function(x, y){
+        # model list object that stores fitted model
         model = list()
-        model$type = "scratch.slm.01 generated simple linear regression model."
+        model$type = "scratch.slm.01: simple linear regression model maker."
         model$gradient = scratch.slm.01$beta1(x, y)
         model$intercept = scratch.slm.01$beta0(x, y) 
         model$errorMsg = paste0("Error! Gradient or intercept is null. ", 
             "Have you fitted a valid model?\n")
+        
+        # function to predict y from new values of x
         model$predict = function(x){
             # input validation
             isBeta1Null = is.null(model$gradient)
             isBeta0Null = is.null(model$intercept)
-            if(isBeta1Null | isBeta0Null) cat(scratch.slm.01$predictError)
+            if(isBeta1Null | isBeta0Null) cat(fittedModel$errorMsg)
             # return predicted value of y
             return( (model$gradient * x) + model$intercept)
         }
