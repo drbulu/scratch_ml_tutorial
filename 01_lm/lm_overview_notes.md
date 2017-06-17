@@ -11,6 +11,8 @@ https://en.wikibooks.org/wiki/LaTeX
 
 ### Simple linear regression: OLS
 
+Can use Ordinary Least squares to estimate coefficients. Can use other methods like maximum likelihood... but will possibly explore those at a later stage.
+
 #### Overall equation
 
 $$y = \beta_0 + \beta_1x + \epsilon$$
@@ -28,6 +30,8 @@ $$\beta_0 = \bar y - \beta_1 \bar x$$
 * Error component $\epsilon$:
 
 Typically assumed to be zero, and estimated as the difference between the fitted model and the actual data.
+
+### Multivariate linear regression: OLS
 
 ## Appendix
 

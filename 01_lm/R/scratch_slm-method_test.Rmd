@@ -1,0 +1,25 @@
+# Testing 
+
+Here we will take a look at the simple linear regression model testing of the implementations that we have created and compare them to each other and to the default implementation.
+
+```{r, loading_implementations}
+# config section
+configSet = list()
+configSet$scriptDir = "./01_lm/R/"
+configSet$modelSrc = list(
+    v01 = "scratch_slm_01.R",
+    v02 = "scratch_slm_02.R",
+    v03 = "scratch_slm_03.R"
+)
+
+# loading model implementations
+source(file.path(configSet$scriptDir, configSet$modelSrc$v01))
+source(file.path(configSet$scriptDir, configSet$modelSrc$v02))
+source(file.path(configSet$scriptDir, configSet$modelSrc$v03))
+
+```
+
+## :)
+
+
+## Testing the implementations

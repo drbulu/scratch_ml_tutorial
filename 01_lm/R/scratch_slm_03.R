@@ -55,5 +55,4 @@ scratch.slm.03 = list(
         # return final fitted model
         return(fittedModel)
     }
-    
 )
